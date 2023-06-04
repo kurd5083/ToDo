@@ -17,10 +17,10 @@ const createTemplate = (Task, index) => {
     return `
     <div class="todo-item  ${Task.complited ? 'checked' : ''}">
         <div class="description">${Task.discription}</div>
-            <div class="buttons">
-                <button onclick = "completeTask(${index})"class="btn-delete"  ${Task.complited ? 'checked' : ''}>&#10004</button>
-                <button onclick = "deleteTask(${index})"class="btn-delete">&#10008</button>
-            </div>               
+        <div class="buttons">
+            <button onclick = "completeTask(${index})"class="btn-delete"  ${Task.complited ? 'checked' : ''}>&#10004</button>
+            <button onclick = "deleteTask(${index})"class="btn-delete">&#10008</button>
+        </div>               
         </div>
     `
 }   

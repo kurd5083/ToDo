@@ -1,128 +1,224 @@
-body{
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+body {
     padding: 0;
-    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
     background: rgb(188, 188, 188);
     color: #000;
 }
-.box{
+
+.box {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
 }
-.todo-img{
-    display: flex;
-}
-.todo-heading h1{
-    font-weight: 100;
-    margin-bottom: 10px;
-}
-.flex-wrapper{
+
+.flex-wrapper {
     flex-direction: column;
-    width: 600px;
+    width: 100%;
     display: flex;
 }
-.input-wrapper{
-    padding: 15px;
+.todo-heading {
+    margin-bottom: 50px;
 }
-.input-wrapper input{
+.todo-heading h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.todo-heading span {
+    font-size: 30px;
+}
+
+.input-wrapper {
+    padding: 20px;
+}
+
+.todo-img {
+    display: flex;
+    margin-top: 50px;
+}
+
+.add-todo-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+.add-todo-wrapper span {
+    padding: 20px;
+    background-color: rgb(212, 212, 212);
+    text-align: left;
+    font-size: 30px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.ib-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper input {
+    box-sizing: border-box;
     border: 1px solid #999;
-    width: 570px;
-    height: 35px;
+    height: 70px;
+    width: 100%;
     outline: none;
+    font-size: 30px;
+    padding: 20px;
     border-radius: 5px 5px 5px 5px;
 }
-.button-wrapper{
+
+.button-wrapper {
     padding: 15px;
 }
-.button-wrapper button{
-    height: 37px;
-    width: 90px;
+
+.button-wrapper button {
     border: none;
     outline: none;
+    padding: 20px 30px;
     border-radius: 5px 5px 5px 5px;
     background-color: rgb(42, 42, 154);
     color: #fff;
-    font-size: 14px;
+    font-size: 30px;
 }
-.button-wrapper button:hover{
+
+.button-wrapper button:hover {
     filter: brightness(90%);
 }
-.button-wrapper button:active{
+
+.button-wrapper button:active {
     filter: brightness(120%);
 }
-.btn-delete{
-    background-color: rgb(232, 232, 232);
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
+
+.todos-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
 }
-.todo-item{
+
+.todo-item {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #999;
     align-items: center;
     background-color: #fff;
-    padding: 10px;
-    width: 585px;
+    padding: 20px;
+    width: 100%;
 }
-.todos-wrapper{
-    margin-top: 30px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.description {
+    font-size: 24px;
 }
-.checked{
+
+.btn-delete {
+    background-color: rgb(232, 232, 232);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.checked {
     background-color: darkgray;
     opacity: 0.5;
 }
-.clear{
-    color: #fff;
-    background-color: rgb(71, 71, 71);
-    border: none;
-    padding: 9px 15px;
-    border-radius: 3px;
-    font-size: 14px;
-    margin-top: 20px;
-}
-.clear:hover{
-    filter: brightness(90%);
-}
-.clear:active{
-    filter: brightness(120%);
-}
-.deletion{
+
+.deletion {
     animation: opacity 1s ease-in-out;
 }
-@keyframes opacity{
-    from{
+
+@keyframes opacity {
+    from {
         opacity: 1;
     }
-    to{
+
+    to {
         opacity: 0;
     }
 }
-.add-todo-wrapper{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(238, 238, 238);
-    border-radius: 5px 5px 5px 5px;
+
+@media (max-width: 1200px) {
+    .todo-heading h1 {
+        font-size: 60px;
+    }
+
+    .todo-heading span {
+        font-size: 40px;
+    }
+
+    .description {
+        font-size: 30px;
+    }
+
+    .btn-delete {
+
+        font-size: 30px;
+    }
+
+    .add-todo-wrapper span {
+        font-size: 34px;
+    }
+
+    .input-wrapper input {
+        font-size: 40px;
+    }
+
+    .button-wrapper button {
+        font-size: 34px;
+    }
 }
-.add-todo-wrapper span{
-    padding: 15px;
-    background-color: rgb(212, 212, 212);
-    width: 576px;
-    text-align: left;
-    border-radius: 5px 5px 0px 0px;
-}
-.ib-wrapper{
-    display: flex;
-    flex-direction: column;
-}
-.clearBox{
-    display: flex;
-    width: 606px;
-    justify-content: flex-end;
+
+@media (max-width: 640px) {
+    .box {
+        padding: 0;
+    }
+    .todo-heading {
+        text-align: center;
+    }
+    .todo-heading h1{
+        font-size: 38px;
+    }
+    .todo-heading span{
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 30px;
+    }
+
+    .btn-delete {
+        padding: 10px 15px;
+        font-size: 30px;
+    }
+
+    .add-todo-wrapper span {
+        font-size: 30px;
+        text-align: center;
+    }
+    .ib-wrapper {
+        align-items: center;
+    }
+
+    .input-wrapper input {
+        text-align: center;
+        font-size: 30px;
+    }
+    .button-wrapper button {
+        font-size: 30px;
+    }
+
 }
